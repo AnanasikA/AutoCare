@@ -1,52 +1,54 @@
 import React from 'react';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
-import '../assets/styles/Footer.css';
+import MapboxMap from './MapboxMap'; // Importuj komponent mapy
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
+import 'tailwindcss/tailwind.css';
 
 function Footer() {
     return (
-        <footer className="footer">
-            <div className="footer-container">
-                <div className="footer-column">
-                    <div className="footer-info">
-                        <h4>Informacje Kontaktowe</h4>
-                        <p>Adres: Ulica Przykładowa 123, Miasto</p>
-                        <p>Telefon: +48 123 456 789</p>
-                        <p>Email: kontakt@example.com</p>
+        <footer className="bg-[#2c3e50] text-[#ecf0f1] py-5 w-full text-sm relative animate-fadeInFooter">
+            <div className="flex flex-wrap justify-between gap-8 px-4 max-w-screen-xl mx-auto">
+                {/* Mapa */}
+                <div className="flex-1 min-w-[300px] box-border">
+                    <div className="text-center mb-5">
+                        <h4 className="text-2xl font-bold text-[#f39c12] mb-4 uppercase tracking-wider animate-fadeInHeader">Jak Dojechać?</h4>
+                        <MapboxMap /> {/* Dodaj komponent mapy */}
                     </div>
                 </div>
-                <div className="footer-column">
-                    <div className="footer-map">
-                        <h4>Jak Dojechać?</h4>
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2426.7014709309665!2d-0.12764738404223966!3d51.50735077963689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b3232d00f83%3A0x57d4f7339b7a02d3!2sLondon%2C%20UK!5e0!3m2!1sen!2sus!4v1606930448563!5m2!1sen!2sus"
-                            allowFullScreen=""
-                            loading="lazy"
-                        ></iframe>
-                    </div>
-                </div>
-                <div className="footer-column">
-                    <div className="footer-social">
-                        <h4>Znajdź Nas Online</h4>
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                            <FaFacebookF />
-                            <span>Facebook</span>
-                        </a>
-                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                            <FaTwitter />
-                            <span>Twitter</span>
-                        </a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                            <FaInstagram />
-                            <span>Instagram</span>
-                        </a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                            <FaLinkedin />
-                            <span>LinkedIn</span>
-                        </a>
+                {/* Informacje kontaktowe */}
+                <div className="flex-1 min-w-[300px] box-border ml-[80px]">
+                    <div className="flex flex-col gap-6">
+                        {/* Sekcja Informacje Kontaktowe */}
+                        <div className="text-left">
+                            <h4 className="text-2xl font-bold text-[#f39c12] mb-2 uppercase tracking-wider animate-fadeInHeader">Informacje Kontaktowe</h4>
+                            <div className="flex items-center mt-2">
+                                <FaMapMarkerAlt className="text-[#f39c12] text-xl mr-3" />
+                                <p className="text-lg">Adres: Ulica Przykładowa 123, Miasto</p>
+                            </div>
+                            <div className="flex items-center mt-2">
+                                <FaPhoneAlt className="text-[#f39c12] text-xl mr-3" />
+                                <p className="text-lg">Telefon: +48 123 456 789</p>
+                            </div>
+                            <div className="flex items-center mt-2">
+                                <FaEnvelope className="text-[#f39c12] text-xl mr-3" />
+                                <p className="text-lg">Email: kontakt@example.com</p>
+                            </div>
+                        </div>
+
+                        {/* Sekcja Naprawy Samochodowe */}
+                        <div className="text-left">
+                            <h4 className="text-2xl font-bold text-[#f39c12] mb-2 uppercase tracking-wider animate-fadeInHeader">Naprawy Samochodowe</h4>
+                            <p className="text-lg mt-2">Oferujemy szybkie i profesjonalne naprawy wszelkich usterek mechanicznych i elektrycznych. Nasz doświadczony zespół pracuje 24/7.</p>
+                        </div>
+
+                        {/* Godziny otwarcia */}
+                        <div className="text-left">
+                            <h4 className="text-2xl font-bold text-[#f39c12] mb-2 uppercase tracking-wider animate-fadeInHeader">Godziny Otwarcia</h4>
+                            <p className="text-lg mt-2">Czynne 24/7</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div className="footer-bottom">
+            <div className="mt-5 text-center text-base">
                 <p>&copy; 2024 My Complex Website. All rights reserved.</p>
             </div>
         </footer>
@@ -54,8 +56,3 @@ function Footer() {
 }
 
 export default Footer;
-
-
-
-
-
