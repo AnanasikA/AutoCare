@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/AutoCare/static/css/main.e929916a.css",
+    "main.js": "/AutoCare/static/js/main.fac98508.js",
+    "index.html": "/AutoCare/index.html",
+    "main.e929916a.css.map": "/AutoCare/static/css/main.e929916a.css.map",
+    "main.fac98508.js.map": "/AutoCare/static/js/main.fac98508.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e929916a.css",
+    "static/js/main.fac98508.js"
+  ]
+}
