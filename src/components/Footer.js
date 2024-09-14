@@ -14,11 +14,12 @@ function Footer() {
                         <MapboxMap /> {/* Dodaj komponent mapy */}
                     </div>
                 </div>
+                
                 {/* Informacje kontaktowe */}
-                <div className="flex-1 min-w-[300px] box-border ml-[80px]">
+                <div className="flex-1 min-w-[300px] box-border">
                     <div className="flex flex-col gap-6">
                         {/* Sekcja Informacje Kontaktowe */}
-                        <div className="text-left">
+                        <div className="text-left mb-6">
                             <h4 className="text-2xl font-bold text-[#f39c12] mb-2 uppercase tracking-wider animate-fadeInHeader">Informacje Kontaktowe</h4>
                             <div className="flex items-center mt-2">
                                 <FaMapMarkerAlt className="text-[#f39c12] text-xl mr-3" />
@@ -35,13 +36,13 @@ function Footer() {
                         </div>
 
                         {/* Sekcja Naprawy Samochodowe */}
-                        <div className="text-left">
+                        <div className="text-left hidden lg:block">
                             <h4 className="text-2xl font-bold text-[#f39c12] mb-2 uppercase tracking-wider animate-fadeInHeader">Naprawy Samochodowe</h4>
                             <p className="text-lg mt-2">Oferujemy szybkie i profesjonalne naprawy wszelkich usterek mechanicznych i elektrycznych. Nasz doświadczony zespół pracuje 24/7.</p>
                         </div>
 
                         {/* Godziny otwarcia */}
-                        <div className="text-left">
+                        <div className="text-left hidden lg:block">
                             <h4 className="text-2xl font-bold text-[#f39c12] mb-2 uppercase tracking-wider animate-fadeInHeader">Godziny Otwarcia</h4>
                             <p className="text-lg mt-2">Czynne 24/7</p>
                         </div>

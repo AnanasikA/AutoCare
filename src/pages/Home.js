@@ -9,7 +9,7 @@ function Home() {
     };
 
     return (
-        <section id="home" className="relative flex flex-col 2xl:flex-row items-center p-4 text-gray-100 min-h-screen">
+        <section id="home" className="relative flex flex-col 2xl:flex-row items-center p-4 text-gray-100 min-h-screen overflow-hidden">
             {/* Tło wideo */}
             <div className="absolute inset-0 overflow-hidden z-10">
                 <video className="w-full h-full object-cover" autoPlay muted loop style={{ minHeight: '100vh', maxHeight: '100%'}}>
@@ -104,29 +104,29 @@ function Home() {
                 </div>
 
                 {/* Romby dla mniejszych ekranów */}
-                <div className="md:hidden flex flex-col gap-16 mb-16">
-                    <div className="flex items-center justify-center w-60 h-60 border-4 border-yellow-500 relative transform rotate-45 transition-transform hover:scale-110 mb-8">
+                <div className="flex flex-col md:hidden gap-6 mb-8">
+                    <div className="flex items-center justify-center w-56 h-56 border-4 border-yellow-500 relative transform rotate-45 transition-transform hover:scale-110">
                         <div className="flex flex-col items-center justify-center transform rotate-[-45deg] p-4">
-                            <FaTools className="text-6xl text-yellow-500 mb-4" />
-                            <p className="text-center text-gray-100 text-lg">Oferujemy szybkie i skuteczne naprawy, abyś mógł jak najszybciej wrócić na drogę</p>
+                            <FaTools className="text-5xl text-yellow-500 mb-2" />
+                            <p className="text-center text-gray-100 text-sm">Szybkie naprawy samochodów</p>
                         </div>
                     </div>
-                    <div className="flex items-center justify-center w-60 h-60 border-4 border-yellow-500 relative transform rotate-45 transition-transform hover:scale-110 mb-8">
+                    <div className="flex items-center justify-center w-56 h-56 border-4 border-yellow-500 relative transform rotate-45 transition-transform hover:scale-110">
                         <div className="flex flex-col items-center justify-center transform rotate-[-45deg] p-4">
-                            <GiTowTruck className="text-6xl text-yellow-500 mb-4" />
-                            <p className="text-center text-gray-100 text-lg">Nasza laweta jest dostępna 24/7, aby pomóc Ci w każdej sytuacji.</p>
+                            <GiTowTruck className="text-5xl text-yellow-500 mb-2" />
+                            <p className="text-center text-gray-100 text-sm">Całodobowa obsługa lawetowa</p>
                         </div>
                     </div>
-                    <div className="flex items-center justify-center w-60 h-60 border-4 border-yellow-500 relative transform rotate-45 transition-transform hover:scale-110 mb-8">
+                    <div className="flex items-center justify-center w-56 h-56 border-4 border-yellow-500 relative transform rotate-45 transition-transform hover:scale-110">
                         <div className="flex flex-col items-center justify-center transform rotate-[-45deg] p-4">
-                            <FaUserCog className="text-6xl text-yellow-500 mb-4" />
-                            <p className="text-center text-gray-100 text-lg">Nasz doświadczony personel zapewnia najwyższą jakość <br /> usług.</p>
+                            <FaUserCog className="text-5xl text-yellow-500 mb-2" />
+                            <p className="text-center text-gray-100 text-sm">Profesjonalna obsługa</p>
                         </div>
                     </div>
-                    <div className="flex items-center justify-center w-60 h-60 border-4 border-yellow-500 relative transform rotate-45 transition-transform hover:scale-110">
+                    <div className="flex items-center justify-center w-56 h-56 border-4 border-yellow-500 relative transform rotate-45 transition-transform hover:scale-110">
                         <div className="flex flex-col items-center justify-center transform rotate-[-45deg] p-4">
-                            <FaPhone className="text-6xl text-yellow-500 mb-4" />
-                            <p className="text-center text-gray-100 text-lg">Skontaktuj się z nami już teraz, aby uzyskać profesjonalną <br /> pomoc!</p>
+                            <FaPhone className="text-5xl text-yellow-500 mb-2" />
+                            <p className="text-center text-gray-100 text-sm">Skontaktuj się z nami!</p>
                         </div>
                     </div>
                 </div>
@@ -136,6 +136,9 @@ function Home() {
 }
 
 export default Home;
+
+
+
 
 
 
