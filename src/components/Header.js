@@ -1,12 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import 'tailwindcss/tailwind.css'; // Import Tailwind CSS
 import '../assets/styles/Header.css'; // Import custom CSS for animations
-import { FaMapMarkerAlt } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaCar } from 'react-icons/fa'; // Import icons
 
 function Header() {
     const [isMenuOpen, setMenuOpen] = useState(false);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     const toggleMenu = () => setMenuOpen(!isMenuOpen);
+
+    const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+    };
+
+    useEffect(() => {
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    // Determine the logo position and visibility
+    const isLogoVisible = windowWidth > 520;
+    const isLogoRight = windowWidth >= 520 && windowWidth <= 768;
 
     return (
         <header className="fixed w-full z-50 bg-[#2c3e50]/80 py-4 flex items-center px-6">
@@ -20,10 +34,14 @@ function Header() {
                 </button>
             )}
 
+            {/* Logo with icon */}
             <div 
-                className={`text-2xl font-bold text-white flex-grow md:flex-grow-0 ${isMenuOpen ? 'text-right' : 'text-center'} md:text-left`}
+                className={`flex items-center ${isLogoVisible ? (isLogoRight ? 'ml-auto' : '') : 'hidden'} md:text-left`}
             >
-                AutoCare Centrum
+                <FaCar size={24} className="text-white mr-2" /> {/* Icon */}
+                <span className="text-2xl font-bold text-white">
+                    AutoCare Centrum
+                </span>
             </div>
 
             {/* Menu for larger screens */}
@@ -38,7 +56,7 @@ function Header() {
 
             {/* Menu for smaller screens */}
             <nav 
-                className={`fixed top-0 left-0 h-full w-64 bg-[#2c3e50]/80 transform ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 z-40 flex flex-col`}
+                className={`fixed top-0 left-0 h-full w-64 bg-[#2c3e50]/80 ${isMenuOpen ? 'block' : 'hidden'} md:hidden flex flex-col`}
             >
                 <div className="flex justify-end p-4">
                     <button className="text-xl text-white" onClick={toggleMenu}>×</button>
@@ -62,6 +80,8 @@ function Header() {
 }
 
 export default Header;
+
+
 
 
 
