@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/AutoCare/static/css/main.e929916a.css",
-    "main.js": "/AutoCare/static/js/main.fac98508.js",
+    "main.css": "/AutoCare/static/css/main.8a973ce1.css",
+    "main.js": "/AutoCare/static/js/main.d2f58794.js",
     "index.html": "/AutoCare/index.html",
-    "main.e929916a.css.map": "/AutoCare/static/css/main.e929916a.css.map",
-    "main.fac98508.js.map": "/AutoCare/static/js/main.fac98508.js.map"
+    "main.8a973ce1.css.map": "/AutoCare/static/css/main.8a973ce1.css.map",
+    "main.d2f58794.js.map": "/AutoCare/static/js/main.d2f58794.js.map"
   },
   "entrypoints": [
-    "static/css/main.e929916a.css",
-    "static/js/main.fac98508.js"
+    "static/css/main.8a973ce1.css",
+    "static/js/main.d2f58794.js"
   ]
 }
