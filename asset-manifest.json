@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/AutoCare/static/css/main.f1421a68.css",
-    "main.js": "/AutoCare/static/js/main.6bbb320c.js",
+    "main.js": "/AutoCare/static/js/main.7bf6326b.js",
     "static/media/home-bg.mp4": "/AutoCare/static/media/home-bg.58bca9db18c4700b780d.mp4",
     "static/media/home-bg.jpg": "/AutoCare/static/media/home-bg.fbe47a02103f4b739f2e.jpg",
     "static/media/car-bg.jpg": "/AutoCare/static/media/car-bg.93d5c27d16b318086fcc.jpg",
@@ -18,10 +18,10 @@
     "static/media/tire-icon.svg": "/AutoCare/static/media/tire-icon.1ca47f7dad258ee347cad48b197f8434.svg",
     "index.html": "/AutoCare/index.html",
     "main.f1421a68.css.map": "/AutoCare/static/css/main.f1421a68.css.map",
-    "main.6bbb320c.js.map": "/AutoCare/static/js/main.6bbb320c.js.map"
+    "main.7bf6326b.js.map": "/AutoCare/static/js/main.7bf6326b.js.map"
   },
   "entrypoints": [
     "static/css/main.f1421a68.css",
-    "static/js/main.6bbb320c.js"
+    "static/js/main.7bf6326b.js"
   ]
 }
