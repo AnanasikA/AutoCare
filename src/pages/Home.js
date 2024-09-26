@@ -1,150 +1,87 @@
 import React from "react";
-import { FaPhone, FaTools, FaUserCog } from 'react-icons/fa';
-import { GiTowTruck } from 'react-icons/gi';
-import 'tailwindcss/tailwind.css'; // Import Tailwind CSS
+import 'tailwindcss/tailwind.css'; 
+import Tool from '../assets/images/tool.png';
+import TowTruck from '../assets/images/tow-truck.png';
+import Wheels from '../assets/images/wheels.png';
+import Phone from '../assets/images/contact.png';
+import FallbackImage from '../assets/images/home-bg.jpg';
+import Video from '../assets/images/home-bg.mp4' 
+
+const services = [
+    {
+        icon: <img src={Wheels} alt="Wheels Icon" className="w-10 h-10 md:w-16 md:h-16" style={{ filter: 'invert(1)'}} />,
+        description: "Wymiana opon szybko i sprawnie!"
+    },
+    {
+        icon: <img src={TowTruck} alt="Tow Truck Icon" className="w-10 h-10 md:w-16 md:h-16" style={{ filter: 'invert(1)'}} />,
+        description: "Usługi lawetowe 24/7 w każdej sytuacji!"
+    },
+    {
+        icon: <img src={Tool} alt="Tool Icon" className="w-10 h-10 md:w-16 md:h-16" style={{ filter: 'invert(1)'}} />,
+        description: "Oferujemy szybkie i skuteczne naprawy."
+    },
+    {
+        icon: <img src={Phone} alt="Phone Icon" className="w-10 h-10 md:w-16 md:h-16" style={{ filter: 'invert(1)'}} />,
+        description: "Skontaktuj się z nami już teraz!"
+    },
+];
+
+const ServiceCard = ({ icon, description }) => (
+    <div className="cursor-pointer flex items-center justify-center w-36 h-36 md:w-60 md:h-60 border-4 border-yellow-500 relative transform rotate-45 transition-transform hover:scale-105 md:hover:scale-110 mx-8 mb-16">
+        <div className="flex flex-col items-center justify-center transform rotate-[-45deg] p-2 md:p-4 font-sans">
+            {icon}
+            <p className="text-center text-gray-100 text-xs md:text-lg mt-2">{description}</p>
+        </div>
+    </div>
+);
+
 
 function Home() {
-    const handleCallClick = () => {
-        window.location.href = 'tel:+123456789'; // Zamień na numer telefonu
-    };
+    function handleCallClick() {
+        window.location.href = 'tel:+123456789'; // Przekierowanie do połączenia telefonicznego
+    }
 
     return (
-        <section id="home" className="relative flex flex-col 2xl:flex-row items-center p-4 text-gray-100 min-h-screen overflow-hidden">
-            {/* Tło wideo */}
+        <section id="home" className="relative flex flex-col 2xl:flex-row items-center p-4 text-gray-100 min-h-screen overflow-hidden font-sans">
+            {/* Background video or fallback image */}
             <div className="absolute inset-0 overflow-hidden z-10">
-                <video className="w-full h-full object-cover" autoPlay muted loop style={{ minHeight: '100vh', maxHeight: '100%'}}>
-                    <source src="https://videos.pexels.com/video-files/5200378/5200378-uhd_2560_1440_30fps.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
+                <video className="w-full h-full object-cover" autoPlay muted loop playsInline poster={FallbackImage}>
+                    <source src={Video} type="video/mp4" />
+                    <img src={FallbackImage} alt="fallback" className="w-full h-full object-cover" />
                 </video>
             </div>
-            <div className="absolute inset-0 bg-black opacity-50 z-20"></div>
 
-            {/* Treść */}
-            <div className="relative z-30 flex flex-col items-start 2xl:w-1/2 p-4 space-y-6 2xl:space-y-8 ml-6 2xl:ml-16">
-                <h1 className="text-5xl md:text-4xl font-bold animate-fadeInUp mb-8 2xl:mb-12 hidden xl:block lg:mt-12 xl:mt-16 2xl:mt-24">
-                    Witamy w AutoCare Centrum
+            {/* Gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black/80 z-20"></div>
+
+            {/* Content */}
+            <div className="relative z-30 flex flex-col items-start w-full p-4 space-y-6 lg:space-y-10 ml-0 md:ml-6 lg:ml-16">
+                <h1 className="text-3xl md:text-3xl lg:text-5xl font-bold animate-fadeInUp mb-12 lg:mb-14">
+                    Witamy w TireFix
                 </h1>
-                <p className="text-xl md:text-lg max-w-lg mb-6 xl:mb-8 hidden xl:block">
-                    Witamy w naszym warsztacie samochodowym, który z dumą i zaangażowaniem od wielu lat oferuje najwyższej jakości usługi dla naszych klientów. Nasza specjalizacja obejmuje szybkie i precyzyjne naprawy mechaniczne, profesjonalną wymianę opon oraz całodobową obsługę lawetową, zapewniając wsparcie każdego dnia tygodnia.
+                <p className="text-base md:text-lg lg:text-xl max-w-lg mb-12 lg:mb-10">
+                    Nasza misja to zapewnienie najwyższej jakości usług motoryzacyjnych, od wymiany opon po naprawy awaryjne i holowanie. Jesteśmy dostępni 24/7, aby pomóc Ci w każdej sytuacji drogowej. Niezależnie od tego, czy potrzebujesz szybkiej naprawy, czy wsparcia technicznego, nasz zespół doświadczonych specjalistów jest gotowy sprostać każdemu wyzwaniu. Zaufaj Tire Titans i ciesz się bezpieczną jazdą!
                 </p>
-                <p className="text-xl md:text-lg max-w-lg mb-8 xl:mb-12 hidden xl:block">
-                    Stawiamy na indywidualne podejście do każdego klienta, dopasowując nasze usługi do specyficznych potrzeb i oczekiwań. Naszą misją jest nie tylko skuteczna naprawa samochodów, ale również zapewnienie pełnego komfortu i bezpieczeństwa na drodze. Nasze wartości – profesjonalizm, rzetelność i serdeczność – gwarantują, że mogą Państwo polegać na nas w każdej sytuacji.
-                </p>
-                <div className="mt-8 xl:mt-12 hidden xl:block">
+                <div className="mt-6 md:mt-10 lg:mt-14">
                     <button 
                         onClick={handleCallClick} 
-                        className="flex items-center bg-yellow-500 text-gray-100 text-lg px-4 py-2 rounded-lg shadow-lg hover:bg-yellow-400 transition-transform transform hover:scale-105 xl:text-xl xl:px-6 xl:py-3"
+                        className="flex items-center bg-yellow-500 text-gray-100 text-sm md:text-lg px-4 py-2 md:px-8 md:py-4 rounded-lg shadow-lg hover:bg-yellow-400 transition-transform transform hover:scale-105 md:text-xl"
                     >
-                        <span className="mr-2 xl:text-xl">Zadzwoń</span>
-                        <FaPhone className="text-lg xl:text-xl" />
+                    <span className="mr-2">Skontaktuj się z nami</span>
+                    <img src={Phone} alt="Phone Icon" className="w-5 h-5 md:w-7 md:h-7" style={{ filter: 'invert(1)' }} />
                     </button>
                 </div>
             </div>
 
-            {/* Romby */}
-            <div className="relative z-30 flex flex-col 2xl:w-1/2 p-4 mt-16 md:mt-24 xl:mt-32 2xl:mt-40">
-                {/* Romby dla większych ekranów */}
-                <div className="hidden 2xl:flex flex-wrap gap-16 2xl:gap-24 mb-16 2xl:mb-24">
-                    <div className="flex items-center justify-center w-60 h-60 border-4 border-yellow-500 relative transform rotate-45 transition-transform hover:scale-110">
-                        <div className="flex flex-col items-center justify-center transform rotate-[-45deg] p-4">
-                            <FaTools className="text-6xl text-yellow-500 mb-4" />
-                            <p className="text-center text-gray-100 text-lg">Oferujemy szybkie i skuteczne naprawy, abyś mógł jak najszybciej wrócić na drogę</p>
-                        </div>
-                    </div>
-                    <div className="flex items-center justify-center w-60 h-60 border-4 border-yellow-500 relative transform rotate-45 transition-transform hover:scale-110">
-                        <div className="flex flex-col items-center justify-center transform rotate-[-45deg] p-4">
-                            <GiTowTruck className="text-6xl text-yellow-500 mb-4" />
-                            <p className="text-center text-gray-100 text-lg">Nasza laweta jest dostępna 24/7, aby pomóc Ci w każdej sytuacji.</p>
-                        </div>
-                    </div>
-                    <div className="flex items-center justify-center w-60 h-60 border-4 border-yellow-500 relative transform rotate-45 transition-transform hover:scale-110">
-                        <div className="flex flex-col items-center justify-center transform rotate-[-45deg] p-4">
-                            <FaUserCog className="text-6xl text-yellow-500 mb-4" />
-                            <p className="text-center text-gray-100 text-lg">Nasz doświadczony personel zapewnia najwyższą jakość <br /> usług.</p>
-                        </div>
-                    </div>
-                    <div className="flex items-center justify-center w-60 h-60 border-4 border-yellow-500 relative transform rotate-45 transition-transform hover:scale-110">
-                        <div className="flex flex-col items-center justify-center transform rotate-[-45deg] p-4">
-                            <FaPhone className="text-6xl text-yellow-500 mb-4" />
-                            <p className="text-center text-gray-100 text-lg">Skontaktuj się z nami już teraz, aby uzyskać profesjonalną <br /> pomoc!</p>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Romby dla średnich ekranów (1450px - 880px) */}
-                <div className="hidden 2xl:hidden md:flex flex-col gap-16 mb-16">
-                    <div className="flex flex-row justify-between gap-16">
-                        <div className="flex items-center justify-center w-60 h-60 border-4 border-yellow-500 relative transform rotate-45 transition-transform hover:scale-110">
-                            <div className="flex flex-col items-center justify-center transform rotate-[-45deg] p-4">
-                                <FaTools className="text-6xl text-yellow-500 mb-4" />
-                                <p className="text-center text-gray-100 text-lg">Oferujemy szybkie i skuteczne naprawy, abyś mógł jak najszybciej wrócić na drogę</p>
-                            </div>
-                        </div>
-                        <div className="flex items-center justify-center w-60 h-60 border-4 border-yellow-500 relative transform rotate-45 transition-transform hover:scale-110">
-                            <div className="flex flex-col items-center justify-center transform rotate-[-45deg] p-4">
-                                <GiTowTruck className="text-6xl text-yellow-500 mb-4" />
-                                <p className="text-center text-gray-100 text-lg">Nasza laweta jest dostępna 24/7, aby pomóc Ci w każdej sytuacji.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="flex flex-row justify-between gap-16">
-                        <div className="flex items-center justify-center w-60 h-60 border-4 border-yellow-500 relative transform rotate-45 transition-transform hover:scale-110">
-                            <div className="flex flex-col items-center justify-center transform rotate-[-45deg] p-4">
-                                <FaUserCog className="text-6xl text-yellow-500 mb-4" />
-                                <p className="text-center text-gray-100 text-lg">Nasz doświadczony personel zapewnia najwyższą jakość <br /> usług.</p>
-                            </div>
-                        </div>
-                        <div className="flex items-center justify-center w-60 h-60 border-4 border-yellow-500 relative transform rotate-45 transition-transform hover:scale-110">
-                            <div className="flex flex-col items-center justify-center transform rotate-[-45deg] p-4">
-                                <FaPhone className="text-6xl text-yellow-500 mb-4" />
-                                <p className="text-center text-gray-100 text-lg">Skontaktuj się z nami już teraz, aby uzyskać profesjonalną <br /> pomoc!</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Romby dla mniejszych ekranów */}
-                <div className="flex flex-col md:hidden gap-6 mb-8">
-                    <div className="flex items-center justify-center w-56 h-56 border-4 border-yellow-500 relative transform rotate-45 transition-transform hover:scale-110">
-                        <div className="flex flex-col items-center justify-center transform rotate-[-45deg] p-4">
-                            <FaTools className="text-5xl text-yellow-500 mb-2" />
-                            <p className="text-center text-gray-100 text-sm">Szybkie naprawy samochodów</p>
-                        </div>
-                    </div>
-                    <div className="flex items-center justify-center w-56 h-56 border-4 border-yellow-500 relative transform rotate-45 transition-transform hover:scale-110">
-                        <div className="flex flex-col items-center justify-center transform rotate-[-45deg] p-4">
-                            <GiTowTruck className="text-5xl text-yellow-500 mb-2" />
-                            <p className="text-center text-gray-100 text-sm">Całodobowa obsługa lawetowa</p>
-                        </div>
-                    </div>
-                    <div className="flex items-center justify-center w-56 h-56 border-4 border-yellow-500 relative transform rotate-45 transition-transform hover:scale-110">
-                        <div className="flex flex-col items-center justify-center transform rotate-[-45deg] p-4">
-                            <FaUserCog className="text-5xl text-yellow-500 mb-2" />
-                            <p className="text-center text-gray-100 text-sm">Profesjonalna obsługa</p>
-                        </div>
-                    </div>
-                    <div className="flex items-center justify-center w-56 h-56 border-4 border-yellow-500 relative transform rotate-45 transition-transform hover:scale-110">
-                        <div className="flex flex-col items-center justify-center transform rotate-[-45deg] p-4">
-                            <FaPhone className="text-5xl text-yellow-500 mb-2" />
-                            <p className="text-center text-gray-100 text-sm">Skontaktuj się z nami!</p>
-                        </div>
-                    </div>
-                </div>
+            {/* Service Cards */}
+            <div className="relative z-30 flex flex-wrap justify-center w-full p-4 mt-12 mb-8 md:mt-24 lg:mt-32 gap-8">
+                {services.map((service, index) => <ServiceCard key={index} {...service} />)}
             </div>
         </section>
     );
 }
 
-export default Home;
-
-
-
-
-
-
-
-
-
+export default Home;  
 
 
 

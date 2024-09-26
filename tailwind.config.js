@@ -1,7 +1,7 @@
 // tailwind.config.js
 module.exports = {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}", // Ścieżki do plików, które zawierają klasy Tailwind
+    "./src/**/*.{js,jsx,ts,tsx}", 
   ],
   theme: {
     extend: {
@@ -22,6 +22,13 @@ module.exports = {
       screens: {
         '2xl': '1450px',
         'xl': '1200px',
+      },
+      fontFamily: {
+        sans: ['Roboto', 'sans-serif'], 
+      },
+      colors: {
+        'custom-gray-1': '#2c3e50',
+        'custom-gray-2': '#34495e',
       },
     },
   },

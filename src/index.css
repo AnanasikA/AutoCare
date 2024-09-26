@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://unpkg.com/leaflet/dist/leaflet.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 
 
 body {
@@ -16,6 +18,48 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.nav-link {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #FBBF24; /* Kolor żółty */
+  transition: width 0.4s ease, left 0.4s ease;
+}
+
+.nav-link:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+/* Pasek przewijania dla przeglądarek WebKit */
+::-webkit-scrollbar {
+  width: 12px; /* Szerokość paska przewijania */
+}
+
+::-webkit-scrollbar-track {
+  background: #2c3e50; /* Tło paska przewijania */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f39c12; /* Kolor uchwytu przewijania */
+  border-radius: 6px; /* Zaokrąglenie uchwytu */
+  border: 3px solid #2c3e50; /* Dodanie odstępu od krawędzi */
+}
+
+/* Pasek przewijania dla przeglądarek Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #f39c12 #2c3e50; /* Uchwyt i tło paska */
 }
 
 

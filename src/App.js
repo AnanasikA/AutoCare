@@ -1,6 +1,6 @@
 import React from 'react';
 import './index.css';
-import { FaPhoneAlt } from 'react-icons/fa';
+import Phone from './assets/images/contact.png';
 import Header from './components/Header';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -11,22 +11,29 @@ import Footer from './components/Footer';
 function App() {
   return (
     <div className="min-h-screen bg-gray-100">
-    <Header />
-    <main className='text-3xl font-bold duration-300 ml-0'>
-      <Home />
-      <About />
-      <Services />
-      <ContactForm />
-      <Footer />
+      {/* Header */}
+      <Header />
 
-      {/* Przycisk "Zadzwoń" */}
-      <a href="tel:+48123456789" className="fixed bottom-4 right-4 bg-[#f39c12] text-white py-3 px-6 rounded-full text-lg shadow-lg flex items-center hover:bg-[#e67e22] transition-colors">
-                <FaPhoneAlt className="mr-2" />
-                Zadzwoń
-            </a>
-    </main>
-</div>
+      {/* Main content */}
+      <main className="text-base font-normal ml-0 transition-all duration-300">
+        <Home />
+        <About />
+        <Services />
+        <ContactForm />
+        <Footer />
+      </main>
+
+      {/* Fixed "Zadzwoń" button */}
+      <a 
+        href="tel:+48123456789" 
+        className="fixed bottom-4 right-4 bg-[#f39c12] text-white py-3 px-6 rounded-full text-lg shadow-lg flex items-center hover:bg-[#e67e22] hover:scale-105 transition-transform duration-300 z-50"
+      >
+      <img src={Phone} alt="phone" className="w-5 h-5 md:w-8 md:h-8 mr-2" style={{ filter: 'invert(1)' }} />
+        Skontaktuj się z nami
+      </a>
+    </div>
   );
 }
 
 export default App;
+

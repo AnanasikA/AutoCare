@@ -24,8 +24,9 @@ function ContactForm() {
   };
 
   return (
-    <section className="bg-[#2c3e50] py-8 px-4" id="contact">
-      <div className="max-w-4xl mx-auto p-8 bg-white rounded-lg shadow-md">
+    <section className="relative bg-gradient-to-r from-[#f39c12] to-[#2c3e50] py-16 px-4" id="contact" style={{ fontFamily: "'Roboto', sans-serif" }}>
+      <div className="absolute inset-0 bg-center bg-no-repeat bg-cover opacity-10" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1508916319692-80a99da75692?q=80&w=2036&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')` }}></div>
+      <div className="max-w-4xl mx-auto p-8 bg-white rounded-lg shadow-lg relative z-10">
         <h2 className="text-3xl font-semibold text-[#2c3e50] mb-6">Skontaktuj się z nami</h2>
         <form onSubmit={handleSubmit} className="flex flex-col w-full">
           <input
