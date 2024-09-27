@@ -1,27 +1,26 @@
 {
   "files": {
-    "main.css": "/AutoCare/static/css/main.f1421a68.css",
-    "main.js": "/AutoCare/static/js/main.7bf6326b.js",
+    "main.css": "/AutoCare/static/css/main.a47abbbd.css",
+    "main.js": "/AutoCare/static/js/main.7ba9941d.js",
     "static/media/home-bg.mp4": "/AutoCare/static/media/home-bg.58bca9db18c4700b780d.mp4",
+    "static/media/service-bg.jpg": "/AutoCare/static/media/service-bg.bb1c15e9e5eb10448e81.jpg",
     "static/media/home-bg.jpg": "/AutoCare/static/media/home-bg.fbe47a02103f4b739f2e.jpg",
-    "static/media/car-bg.jpg": "/AutoCare/static/media/car-bg.93d5c27d16b318086fcc.jpg",
-    "static/media/service-bg.avif": "/AutoCare/static/media/service-bg.d986d65428080836000b.avif",
+    "static/media/car-bg.jpg": "/AutoCare/static/media/car-bg.9644b523ee8052fb49e7.jpg",
     "static/media/map-marker.png": "/AutoCare/static/media/map-marker.8527065b0c8cb6291f62.png",
     "static/media/wheels.png": "/AutoCare/static/media/wheels.ee9c91269df6398ee9ba.png",
     "static/media/logo(1).png": "/AutoCare/static/media/logo(1).7b280288048ab0b1897d.png",
     "static/media/tool.png": "/AutoCare/static/media/tool.bd733c7e56eabe31a217.png",
-    "static/media/logo.png": "/AutoCare/static/media/logo.3619a4f27beb9b5769ba.png",
     "static/media/smartphone.png": "/AutoCare/static/media/smartphone.d7d72db87c44e03826be.png",
     "static/media/tow-truck.png": "/AutoCare/static/media/tow-truck.45ff8e6c93f6a746f0b9.png",
     "static/media/email.png": "/AutoCare/static/media/email.959b5ea086a77bad651b.png",
     "static/media/contact.png": "/AutoCare/static/media/contact.85b72314fa30bc76799a.png",
     "static/media/tire-icon.svg": "/AutoCare/static/media/tire-icon.1ca47f7dad258ee347cad48b197f8434.svg",
     "index.html": "/AutoCare/index.html",
-    "main.f1421a68.css.map": "/AutoCare/static/css/main.f1421a68.css.map",
-    "main.7bf6326b.js.map": "/AutoCare/static/js/main.7bf6326b.js.map"
+    "main.a47abbbd.css.map": "/AutoCare/static/css/main.a47abbbd.css.map",
+    "main.7ba9941d.js.map": "/AutoCare/static/js/main.7ba9941d.js.map"
   },
   "entrypoints": [
-    "static/css/main.f1421a68.css",
-    "static/js/main.7bf6326b.js"
+    "static/css/main.a47abbbd.css",
+    "static/js/main.7ba9941d.js"
   ]
 }
