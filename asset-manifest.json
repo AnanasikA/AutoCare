@@ -1,25 +1,20 @@
 {
   "files": {
-    "main.css": "/AutoCare/static/css/main.6005661a.css",
-    "main.js": "/AutoCare/static/js/main.80a25356.js",
-    "static/media/home-bg.mp4": "/AutoCare/static/media/home-bg.58bca9db18c4700b780d.mp4",
-    "static/media/car-bg.jpg": "/AutoCare/static/media/car-bg.a491ddf470561f4c1e2b.jpg",
-    "static/media/home-bg.jpg": "/AutoCare/static/media/home-bg.cee56198928be6f97980.jpg",
-    "static/media/service-bg.jpg": "/AutoCare/static/media/service-bg.9858145ec9ae83e0a698.jpg",
-    "static/media/tow-truck-1.jpg": "/AutoCare/static/media/tow-truck-1.5646606803a59ab085c0.jpg",
-    "static/media/map-marker.png": "/AutoCare/static/media/map-marker.8527065b0c8cb6291f62.png",
-    "static/media/wheels.png": "/AutoCare/static/media/wheels.ee9c91269df6398ee9ba.png",
-    "static/media/tool.png": "/AutoCare/static/media/tool.bd733c7e56eabe31a217.png",
-    "static/media/smartphone.png": "/AutoCare/static/media/smartphone.d7d72db87c44e03826be.png",
-    "static/media/tow-truck.png": "/AutoCare/static/media/tow-truck.45ff8e6c93f6a746f0b9.png",
-    "static/media/email.png": "/AutoCare/static/media/email.959b5ea086a77bad651b.png",
-    "static/media/contact.png": "/AutoCare/static/media/contact.85b72314fa30bc76799a.png",
-    "index.html": "/AutoCare/index.html",
-    "main.6005661a.css.map": "/AutoCare/static/css/main.6005661a.css.map",
-    "main.80a25356.js.map": "/AutoCare/static/js/main.80a25356.js.map"
+    "main.css": "/www.marecki24.com/static/css/main.8831f830.css",
+    "main.js": "/www.marecki24.com/static/js/main.5081380b.js",
+    "static/media/home-bg.mp4": "/www.marecki24.com/static/media/home-bg.58bca9db18c4700b780d.mp4",
+    "static/media/car-bg.jpg": "/www.marecki24.com/static/media/car-bg.99cdda7b66bb60aa1c9d.jpg",
+    "static/media/home-bg.jpg": "/www.marecki24.com/static/media/home-bg.b3ab75ec1725c0e6eb92.jpg",
+    "static/media/service-bg.jpg": "/www.marecki24.com/static/media/service-bg.3f074919ebdaaaafb5db.jpg",
+    "static/media/tow-truck-1.jpg": "/www.marecki24.com/static/media/tow-truck-1.a56d41fa191cc48dd527.jpg",
+    "static/media/wheels.png": "/www.marecki24.com/static/media/wheels.39fd6cec1b04603f85da.png",
+    "static/media/map-marker.png": "/www.marecki24.com/static/media/map-marker.8e58de291e81e0c49760.png",
+    "index.html": "/www.marecki24.com/index.html",
+    "main.8831f830.css.map": "/www.marecki24.com/static/css/main.8831f830.css.map",
+    "main.5081380b.js.map": "/www.marecki24.com/static/js/main.5081380b.js.map"
   },
   "entrypoints": [
-    "static/css/main.6005661a.css",
-    "static/js/main.80a25356.js"
+    "static/css/main.8831f830.css",
+    "static/js/main.5081380b.js"
   ]
 }
